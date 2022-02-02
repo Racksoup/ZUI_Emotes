@@ -6,13 +6,13 @@ local ZUI_LDB = LibStub("LibDataBroker-1.1"):NewDataObject("ZUI_Emotes", {
     text = "ZUI_Emotes",
     icon = GetItemIcon(5043),
     OnClick = function()
-        if (ZUI_GUI.showing == true)
+        if (ZUI_GUI.frame:IsVisible())
         then
-            ZUI_GUI:Release(ZUI_GUI.frame)
-            ZUI_GUI.showing = false;
+            ZUI_GUI:Release(ZUI_GUI.frame) 
+            
         else
             ZUI_Emotes:OnEnable();
-            ZUI_GUI.showing = true;
+            
         end
     end,
     OnTooltipShow = function(tooltip)
@@ -38,9 +38,7 @@ local defaults = {
 function ZUI_Emotes:OnInitialize()
     self.db = LibStub("AceDB-3.0"):New("ZUI_EmotesDB", { profile = { minimap = { hide = false, }, }, })
     icon:Register("ZUI_Emotes", ZUI_LDB, self.db.profile.minimap)
-    ZUI_GUI.showing = true
-
-
+    
 end
 
 function ZUI_Emotes:OnEnable()
@@ -49,7 +47,6 @@ function ZUI_Emotes:OnEnable()
     ZUI_GUI.frame:SetStatusText("Ace_GUI-3.0 Example Container Frame")
     ZUI_GUI.frame:SetCallback("OnClose", function(widget) ZUI_GUI:Release(widget) end)
     ZUI_GUI.frame:SetLayout("Fill")
-
 
     ZUI_GUI.tab =  ZUI_GUI:Create("TabGroup")
     ZUI_GUI.tab:SetLayout("Flow")
