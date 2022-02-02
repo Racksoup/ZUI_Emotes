@@ -9,10 +9,8 @@ local ZUI_LDB = LibStub("LibDataBroker-1.1"):NewDataObject("ZUI_Emotes", {
         if (ZUI_GUI.frame:IsVisible())
         then
             ZUI_GUI:Release(ZUI_GUI.frame) 
-            
         else
             ZUI_Emotes:OnEnable();
-            
         end
     end,
     OnTooltipShow = function(tooltip)
@@ -50,7 +48,7 @@ function ZUI_Emotes:OnEnable()
 
     ZUI_GUI.tab =  ZUI_GUI:Create("TabGroup")
     ZUI_GUI.tab:SetLayout("Flow")
-    ZUI_GUI.tab:SetTabs({{text="Tab 1", value="tab1"}, {text="Tab 2", value="tab2"}})
+    ZUI_GUI.tab:SetTabs({{text="Action", value="tab1"}, {text="Voice", value="tab2"}, {text="Other", value="tab3"}})
     ZUI_GUI.tab:SetCallback("OnGroupSelected", SelectGroup)
     ZUI_GUI.tab:SelectTab("tab1")
 
@@ -61,7 +59,7 @@ function ZUI_Emotes:OnDisable()
     
 end
 
-local function DrawGroup1(container)
+function DrawGroup1(container)
     local desc = ZUI_GUI:Create("Label")
     desc:SetText("This is Tab 1")
     desc:SetFullWidth(true)
@@ -70,10 +68,11 @@ local function DrawGroup1(container)
     local button = ZUI_GUI:Create("Button")
     button:SetText("Tab 1 Button")
     button:SetWidth(200)
+    button:SetCallback("OnClick", Btn1Clicked)
     container:AddChild(button)
 end
     
-local function DrawGroup2(container)
+function DrawGroup2(container)
     local desc = ZUI_GUI:Create("Label")
     desc:SetText("This is Tab 2")
     desc:SetFullWidth(true)
@@ -85,13 +84,19 @@ local function DrawGroup2(container)
     container:AddChild(button)
 end
     
-local function SelectGroup(container, event, group)
+function SelectGroup(container, event, group)
     container:ReleaseChildren()
     if group == "tab1" then
         DrawGroup1(container)
     elseif group == "tab2" then
         DrawGroup2(container)
+    elseif group == "tab3" then
+        DrawGroup3(container)
     end
+end
+
+function Btn1Clicked()
+    ZUI_Emotes:Print("bb")
 end
     
 
