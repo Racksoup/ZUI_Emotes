@@ -1289,7 +1289,7 @@ function DrawGroup3(container)
         container:AddChild(button)
     end
 
-    for i, other in ipairs(options.args.other) do 
+    for i, other in ipairs(ZUI_Emotes.list.other) do 
         createButton(other.text, other.emote)
     end
 end
@@ -1311,4 +1311,7 @@ end
 function BtnClicked(emote)
     DoEmote(emote)
 end
-    
+
+function ZUI_Emotes:AddEmoteList(list)
+    ZUI_Emotes.list = list
+end    

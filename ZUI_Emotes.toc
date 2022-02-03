@@ -8,5 +8,5 @@
 embeds.xml
 
 enUS.lua
-
 core.lua
+emoteList.lua
