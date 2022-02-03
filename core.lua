@@ -35,7 +35,7 @@ local options = {
             },
             {
                 text = "Attack Target",
-                emote = "attacktarget"
+                emote = "attackmytarget"
             },
             {
                 text = "Bashful",
@@ -51,7 +51,7 @@ local options = {
             },
             {
                 text = "Blow",
-                emote = "blow"
+                emote = "kiss"
             },
             {
                 text = "Blush",
@@ -71,7 +71,7 @@ local options = {
             },
             {
                 text = "Bravo",
-                emote = "bravo",
+                emote = "applaud",
             },
             {
                 text = "Bye",
@@ -91,7 +91,7 @@ local options = {
             },
             {
                 text = "Chew",
-                emote = "chew",
+                emote = "eat",
             },
             {
                 text = "Chicken",
@@ -115,7 +115,7 @@ local options = {
             },
             {
                 text = "Congratulate",
-                emote = "cong",
+                emote = "congratulate",
             },
             {
                 text = "Cower",
@@ -147,19 +147,19 @@ local options = {
             },
             {
                 text = "Excited",
-                emote = "excited",
+                emote = "talkex",
             },
             {
                 text = "Farewell",
-                emote = "farewell",
+                emote = "bye",
             },
             {
                 text = "Feast",
-                emote = "feast",
+                emote = "eat",
             },
             {
                 text = "Flap",
-                emote = "flap",
+                emote = "chicken",
             },
             {
                 text = "Flee",
@@ -175,15 +175,7 @@ local options = {
             },
             {
                 text = "Follow Me",
-                emote = "followme",
-            },
-            {
-                text = "For The Alliance!",
-                emote = "forthealliance",
-            },
-            {
-                text = "For The Horde!",
-                emote = "forthehorde",
+                emote = "follow",
             },
             {
                 text = "Gasp",
@@ -203,7 +195,7 @@ local options = {
             },
             {
                 text = "Goodbye",
-                emote = "goodbye",
+                emote = "bye",
             },
             {
                 text = "Greet",
@@ -239,7 +231,7 @@ local options = {
             },
             {
                 text = "Hi",
-                emote = "hi",
+                emote = "hello",
             },
             {
                 text = "Incoming",
@@ -263,11 +255,11 @@ local options = {
             },
             {
                 text = "Laydown",
-                emote = "lay",
+                emote = "laydown",
             },
             {
                 text = "LoL",
-                emote = "lol",
+                emote = "laugh",
             },
             {
                 text = "Lost",
@@ -275,7 +267,7 @@ local options = {
             },
             {
                 text = "Mad",
-                emote = "mad",
+                emote = "angry",
             },
             {
                 text = "Mount-Rear",
@@ -303,11 +295,11 @@ local options = {
             },
             {
                 text = "Party",
-                emote = "party",
+                emote = "drink",
             },
             {
                 text = "Peon",
-                emote = "peon",
+                emote = "grovel",
             },
             {
                 text = "Plead",
@@ -327,7 +319,7 @@ local options = {
             },
             {
                 text = "Puzzled",
-                emote = "puzzled",
+                emote = "puzzle",
             },
             {
                 text = "Rasp",
@@ -351,7 +343,7 @@ local options = {
             },
             {
                 text = "Shindig",
-                emote = "shindig",
+                emote = "drink",
             },
             {
                 text = "Shrug",
@@ -363,7 +355,7 @@ local options = {
             },
             {
                 text = "Silly",
-                emote = "silly",
+                emote = "joke",
             },
             {
                 text = "Sleep",
@@ -371,15 +363,15 @@ local options = {
             },
             {
                 text = "Sob",
-                emote = "sob",
+                emote = "cry",
             },
             {
                 text = "Strong",
-                emote = "strong",
+                emote = "flex",
             },
             {
                 text = "Strut",
-                emote = "strut",
+                emote = "chicken",
             },
             {
                 text = "Surrender",
@@ -427,7 +419,7 @@ local options = {
             },
             {
                 text = "Weep",
-                emote = "weep",
+                emote = "cry",
             },
             {
                 text = "Welcome",
@@ -435,11 +427,11 @@ local options = {
             },
             {
                 text = "Woot",
-                emote = "woot",
+                emote = "cheer",
             },
             {
                 text = "Yes",
-                emote = "yes",
+                emote = "nod",
             },
             {
                 text = "YW",
@@ -453,11 +445,11 @@ local options = {
             },
             {
                 text = "Attack Target",
-                emote = "attacktarget"
+                emote = "attackmytarget"
             },
             {
                 text = "Blow",
-                emote = "blow"
+                emote = "kiss"
             },
             {
                 text = "Bored",
@@ -465,7 +457,7 @@ local options = {
             },
             {
                 text = "Bravo",
-                emote = "bravo",
+                emote = "applaud",
             },
             {
                 text = "Bye",
@@ -501,7 +493,7 @@ local options = {
             },
             {
                 text = "Congratulate",
-                emote = "cong",
+                emote = "congratulate",
             },
             {
                 text = "Cry",
@@ -509,11 +501,11 @@ local options = {
             },
             {
                 text = "Farewell",
-                emote = "farewell",
+                emote = "bye",
             },
             {
                 text = "Flap",
-                emote = "flap",
+                emote = "chicken",
             },
             {
                 text = "Flee",
@@ -525,15 +517,7 @@ local options = {
             },
             {
                 text = "Follow Me",
-                emote = "followme",
-            },
-            {
-                text = "For The Alliance!",
-                emote = "forthealliance",
-            },
-            {
-                text = "For The Horde!",
-                emote = "forthehorde",
+                emote = "follow",
             },
             {
                 text = "Giggle",
@@ -549,7 +533,7 @@ local options = {
             },
             {
                 text = "Goodbye",
-                emote = "goodbye",
+                emote = "bye",
             },
             {
                 text = "Guffaw",
@@ -569,7 +553,7 @@ local options = {
             },
             {
                 text = "Hi",
-                emote = "hi",
+                emote = "hello",
             },
             {
                 text = "Incoming",
@@ -585,7 +569,7 @@ local options = {
             },
             {
                 text = "LoL",
-                emote = "lol",
+                emote = "laugh",
             },
             {
                 text = "Moo",
@@ -625,19 +609,15 @@ local options = {
             },
             {
                 text = "Silly",
-                emote = "silly",
+                emote = "joke",
             },            
             {
                 text = "Sob",
-                emote = "sob",
-            },
-            {
-                text = "Strong",
-                emote = "strong",
+                emote = "cry",
             },
             {
                 text = "Strut",
-                emote = "strut",
+                emote = "chicken",
             },
             {
                 text = "Taunt",
@@ -661,7 +641,7 @@ local options = {
             },
             {
                 text = "Weep",
-                emote = "weep",
+                emote = "cry",
             },
             {
                 text = "Welcome",
@@ -673,7 +653,7 @@ local options = {
             },
             {
                 text = "Woot",
-                emote = "woot",
+                emote = "cheer",
             },
             {
                 text = "Yawn",
@@ -681,11 +661,7 @@ local options = {
             },
             {
                 text = "Yes",
-                emote = "yes",
-            },
-            {
-                text = "YW",
-                emote = "yw",
+                emote = "nod",
             },
         },
         other = {
@@ -731,7 +707,7 @@ local options = {
             },
             {
                 text = "Belch",
-                emote = "belch"
+                emote = "burp"
             },
             {
                 text = "Bite",
@@ -747,7 +723,7 @@ local options = {
             },
             {
                 text = "Blood",
-                emote = "blood"
+                emote = "bleed"
             },
             {
                 text = "Blink",
@@ -787,11 +763,11 @@ local options = {
             },
             {
                 text = "Cat",
-                emote = "cat",
+                emote = "scratch",
             },
             {
                 text = "Catty",
-                emote = "catty",
+                emote = "scratch",
             },
             {
                 text = "Charm",
@@ -847,15 +823,15 @@ local options = {
             },
             {
                 text = "Disappointed",
-                emote = "disappointed",
+                emote = "frown",
             },
             {
                 text = "Doh..",
-                emote = "doh",
+                emote = "bonk",
             },
             {
                 text = "Doom",
-                emote = "doom",
+                emote = "threaten",
             },
             {
                 text = "Drool",
@@ -899,7 +875,7 @@ local options = {
             },
             {
                 text = "Fear",
-                emote = "fear",
+                emote = "cower",
             },
             {
                 text = "Fidget",
@@ -911,11 +887,11 @@ local options = {
             },
             {
                 text = "Food",
-                emote = "food",
+                emote = "hungry",
             },
             {
                 text = "Frown",
-                emote = "frowm",
+                emote = "frown",
             },
             {
                 text = "Gaze",
@@ -923,7 +899,7 @@ local options = {
             },
             {
                 text = "Glad",
-                emote = "glad",
+                emote = "happy",
             },
             {
                 text = "Glare",
@@ -967,7 +943,7 @@ local options = {
             },
             {
                 text = "Impatient",
-                emote = "impatient",
+                emote = "fidget",
             },
             {
                 text = "Introduce",
@@ -979,11 +955,11 @@ local options = {
             },
             {
                 text = "Knuckles",
-                emote = "knuckles",
+                emote = "crack",
             },
             {
                 text = "Lavish",
-                emote = "lavish",
+                emote = "praise",
             },
             {
                 text = "Lick",
@@ -1039,11 +1015,11 @@ local options = {
             },
             {
                 text = "Pest",
-                emote = "pest",
+                emote = "shoo",
             },
             {
                 text = "Pick",
-                emote = "pick",
+                emote = "nosepick",
             },
             {
                 text = "Pity",
@@ -1051,7 +1027,7 @@ local options = {
             },
             {
                 text = "Pizza",
-                emote = "pizza",
+                emote = "hungry",
             },
             {
                 text = "Poke",
@@ -1071,7 +1047,7 @@ local options = {
             },
             {
                 text = "Question",
-                emote = "question",
+                emote = "talkq",
             },
             {
                 text = "Raise",
@@ -1083,7 +1059,7 @@ local options = {
             },
             {
                 text = "Rear",
-                emote = "rear",
+                emote = "shake",
             },
             {
                 text = "Sad",
@@ -1123,7 +1099,7 @@ local options = {
             },
             {
                 text = "Smell",
-                emote = "smell",
+                emote = "stink",
             },
             {
                 text = "Smirk",
@@ -1151,7 +1127,7 @@ local options = {
             },
             {
                 text = "Sorry",
-                emote = "sorry",
+                emote = "apologize",
             },
             {
                 text = "Spit",
@@ -1159,7 +1135,7 @@ local options = {
             },
             {
                 text = "Spoon",
-                emote = "spoon",
+                emote = "cuddle",
             },
             {
                 text = "Stare",
@@ -1187,7 +1163,7 @@ local options = {
             },
             {
                 text = "Threat",
-                emote = "threat",
+                emote = "threaten",
             },
             {
                 text = "Tickle",
@@ -1203,7 +1179,7 @@ local options = {
             },
             {
                 text = "Volunteer",
-                emote = "volunteer",
+                emote = "raise",
             },
             {
                 text = "Whine",
@@ -1211,7 +1187,7 @@ local options = {
             },
             {
                 text = "Wickedly",
-                emote = "whicked",
+                emote = "grin",
             },
             {
                 text = "Wink",
@@ -1223,11 +1199,11 @@ local options = {
             },
             {
                 text = "Wrath",
-                emote = "wrath",
+                emote = "threaten",
             },
             {
                 text = "Yay!",
-                emote = "yay",
+                emote = "happy",
             },
         },
     },
