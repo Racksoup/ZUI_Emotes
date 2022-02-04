@@ -50,7 +50,7 @@ function ZUI_Emotes:OnEnable()
     ZUI_GUI.frame:SetHeight(490)
 
     ZUI_GUI.tab =  ZUI_GUI:Create("TabGroup")
-    ZUI_GUI.tab:SetLayout("Flow")
+    ZUI_GUI.tab:SetLayout("Fill")
     ZUI_GUI.tab:SetTabs({{text="Animation", value="tab1"}, {text="Voice", value="tab2"}, {text="Other", value="tab3"}})
     ZUI_GUI.tab:SetCallback("OnGroupSelected", SelectGroup)
     ZUI_GUI.tab:SelectTab("tab1")
@@ -59,26 +59,28 @@ function ZUI_Emotes:OnEnable()
 end
 
 function ZUI_Emotes:OnDisable()
-    ZUI_GUI.frame:SetUserPlaced(true);
     ZUI_GUI:Release(ZUI_GUI.frame) 
 end
 
-function DrawGroup1(container)
+function DrawGroup(container, emoteList)
     local desc = ZUI_GUI:Create("Label")
+    local scroll = ZUI_GUI:Create("ScrollFrame")
+    scroll:SetLayout("Flow")
     desc:SetFullWidth(true)
-    container:AddChild(desc)
+    scroll:AddChild(desc)
     
     local function createButton(text, emote)
         local button = ZUI_GUI:Create("InteractiveLabel")
         button:SetText(text)
         button:SetWidth(95)
         button:SetCallback("OnClick", function() ZUI_Emotes:BtnClicked(emote) end)
-        container:AddChild(button)
+        scroll:AddChild(button)
     end
-
-    for i, anim in ipairs(ZUI_Emotes.list.anim) do 
-        createButton(anim.text, anim.emote)
+    
+    for i, item in ipairs(emoteList) do 
+        createButton(item.text, item.emote)
     end
+    container:AddChild(scroll)
 end
     
 function DrawGroup2(container)
@@ -121,13 +123,13 @@ function SelectGroup(container, event, group)
     container:ReleaseChildren()
     if group == "tab1" then
         ZUI_GUI.frame:SetStatusText("Animation Emotes")
-        DrawGroup1(container)
+        DrawGroup(container, ZUI_Emotes.list.anim)
     elseif group == "tab2" then
         ZUI_GUI.frame:SetStatusText("Voice Emotes")
-        DrawGroup2(container)
+        DrawGroup(container, ZUI_Emotes.list.voice)
     elseif group == "tab3" then
         ZUI_GUI.frame:SetStatusText("Other Emotes")
-        DrawGroup3(container)
+        DrawGroup(container, ZUI_Emotes.list.other)
     end
 end
 
