@@ -1185,4 +1185,4 @@ local emotes = {
         },
     },
 }
-ZUI_Emotes:AddEmoteList(emotes)
+ZUI_Emotes:setEmoteList(emotes)

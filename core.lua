@@ -73,7 +73,7 @@ function DrawGroup(container, emoteList)
         local button = ZUI_GUI:Create("InteractiveLabel")
         button:SetText(text)
         button:SetWidth(95)
-        button:SetCallback("OnClick", function() ZUI_Emotes:BtnClicked(emote) end)
+        button:SetCallback("OnClick", function() DoEmote(emote) end)
         scroll:AddChild(button)
     end
     
@@ -81,42 +81,6 @@ function DrawGroup(container, emoteList)
         createButton(item.text, item.emote)
     end
     container:AddChild(scroll)
-end
-    
-function DrawGroup2(container)
-    local desc = ZUI_GUI:Create("Label")
-    desc:SetFullWidth(true)
-    container:AddChild(desc)
-    
-    local function createButton(text, emote)
-        local button = ZUI_GUI:Create("InteractiveLabel")
-        button:SetText(text)
-        button:SetWidth(95)
-        button:SetCallback("OnClick", function() ZUI_Emotes:BtnClicked(emote) end)
-        container:AddChild(button)
-    end
-
-    for i, voice in ipairs(ZUI_Emotes.list.voice) do 
-        createButton(voice.text, voice.emote)
-    end
-end
-
-function DrawGroup3(container)
-    local desc = ZUI_GUI:Create("Label")
-    desc:SetFullWidth(true)
-    container:AddChild(desc)
-    
-    local function createButton(text, emote)
-        local button = ZUI_GUI:Create("InteractiveLabel")
-        button:SetText(text)
-        button:SetWidth(95)
-        button:SetCallback("OnClick", function() ZUI_Emotes:BtnClicked(emote) end)
-        container:AddChild(button)
-    end
-
-    for i, other in ipairs(ZUI_Emotes.list.other) do 
-        createButton(other.text, other.emote)
-    end
 end
     
 function SelectGroup(container, event, group)
@@ -133,10 +97,6 @@ function SelectGroup(container, event, group)
     end
 end
 
-function ZUI_Emotes:BtnClicked(emote)
-    DoEmote(emote)
-end
-
-function ZUI_Emotes:AddEmoteList(list)
+function ZUI_Emotes:setEmoteList(list)
     ZUI_Emotes.list = list
 end    
