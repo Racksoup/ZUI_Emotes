@@ -39,8 +39,8 @@ local defaults = {
             ["offsetY"] = 0,
         },
         frameSize = {
-            ["width"] = 570,
-            ["height"] = 490,
+            ["width"] = 370,
+            ["height"] = 450,
         },
     },
 }
