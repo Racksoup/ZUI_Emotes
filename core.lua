@@ -70,7 +70,7 @@ end
 
 function ZUI_Emotes:OnDisable()
     self.db.profile.framePos["point"], x, y, self.db.profile.framePos["offsetX"], self.db.profile.framePos["offsetY"] = ZUI_GUI.frame:GetPoint()
-    
+    self.db.profile.frameSize["width"], self.db.profile.frameSize["height"] = ZUI_GUI.frame.frame:GetSize()
     ZUI_GUI:Release(ZUI_GUI.frame) 
 end
 
