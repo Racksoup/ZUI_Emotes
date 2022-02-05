@@ -1,9 +1,9 @@
 ZUI_Emotes = LibStub("AceAddon-3.0"):NewAddon("ZUI_Emotes", "AceConsole-3.0", "AceEvent-3.0")
-local L = LibStub("AceLocale-3.0"):GetLocale("WelcomeHome")
 local ZUI_GUI = LibStub("AceGUI-3.0")
+local L = LibStub("AceLocale-3.0"):GetLocale("ZUI_Emotes_Locale")
 local ZUI_LDB = LibStub("LibDataBroker-1.1"):NewDataObject("ZUI_Emotes", {
     type = "data source",
-    text = "ZUI_Emotes",
+    text = L["ZUI Emotes"],
     icon = GetItemIcon(5043),
     OnClick = function()
         if (ZUI_GUI.frame:IsVisible())
@@ -14,7 +14,7 @@ local ZUI_LDB = LibStub("LibDataBroker-1.1"):NewDataObject("ZUI_Emotes", {
         end
     end,
     OnTooltipShow = function(tooltip)
-        tooltip:SetText("ZUI Emotes")
+        tooltip:SetText(L["ZUI Emotes"])
     end,
 })
 local icon = LibStub("LibDBIcon-1.0")
@@ -33,6 +33,15 @@ local defaults = {
         minimap = {
             hide = false,
         },
+        framePos = {
+            ["point"] = "CENTER",
+            ["offsetX"] = 0,
+            ["offsetY"] = 0,
+        },
+        frameSize = {
+            ["width"] = 570,
+            ["height"] = 490,
+        },
     },
 }
 
@@ -42,23 +51,29 @@ function ZUI_Emotes:OnInitialize()
 end
 
 function ZUI_Emotes:OnEnable()
-    ZUI_GUI.frame = ZUI_GUI:Create("Frame", "MainFrame")
+    ZUI_GUI.frame = ZUI_GUI:Create("Frame")
     ZUI_GUI.frame:SetTitle("ZUI_Emotes")
-    ZUI_GUI.frame:SetCallback("OnClose", function(widget) ZUI_GUI:Release(widget) end)
+    ZUI_GUI.frame:SetCallback("OnClose", function() ZUI_Emotes:OnDisable() end)
     ZUI_GUI.frame:SetLayout("Fill")
-    ZUI_GUI.frame:SetWidth(570)
-    ZUI_GUI.frame:SetHeight(490)
+    ZUI_GUI.frame:SetWidth(self.db.profile.frameSize["width"])
+    ZUI_GUI.frame:SetHeight(self.db.profile.frameSize["height"])
+    ZUI_GUI.frame:SetPoint(self.db.profile.framePos["point"], self.db.profile.framePos["offsetX"], self.db.profile.framePos["offsetY"])
 
+    
+    
     ZUI_GUI.tab =  ZUI_GUI:Create("TabGroup")
     ZUI_GUI.tab:SetLayout("Fill")
-    ZUI_GUI.tab:SetTabs({{text="Animation", value="tab1"}, {text="Voice", value="tab2"}, {text="Other", value="tab3"}})
+    ZUI_GUI.tab:SetTabs({{text=L["Animation"], value="tab1"}, {text=L["Voice"], value="tab2"}, {text=L["Other"], value="tab3"}})
     ZUI_GUI.tab:SetCallback("OnGroupSelected", SelectGroup)
     ZUI_GUI.tab:SelectTab("tab1")
-
+    
     ZUI_GUI.frame:AddChild(ZUI_GUI.tab)
 end
 
 function ZUI_Emotes:OnDisable()
+    --self.db.profile.frameSize["height"] = ZUI_GUI.frame:GetHeight()
+    self.db.profile.framePos["point"], x, y, self.db.profile.framePos["offsetX"], self.db.profile.framePos["offsetY"] = ZUI_GUI.frame:GetPoint()
+    
     ZUI_GUI:Release(ZUI_GUI.frame) 
 end
 
@@ -82,17 +97,17 @@ function DrawGroup(container, emoteList)
     end
     container:AddChild(scroll)
 end
-    
+
 function SelectGroup(container, event, group)
     container:ReleaseChildren()
     if group == "tab1" then
-        ZUI_GUI.frame:SetStatusText("Animation Emotes")
+        ZUI_GUI.frame:SetStatusText(L["Animation Emotes"])
         DrawGroup(container, ZUI_Emotes.list.anim)
     elseif group == "tab2" then
-        ZUI_GUI.frame:SetStatusText("Voice Emotes")
+        ZUI_GUI.frame:SetStatusText(L["Voice Emotes"])
         DrawGroup(container, ZUI_Emotes.list.voice)
     elseif group == "tab3" then
-        ZUI_GUI.frame:SetStatusText("Other Emotes")
+        ZUI_GUI.frame:SetStatusText(L["Other Emotes"])
         DrawGroup(container, ZUI_Emotes.list.other)
     end
 end
@@ -100,3 +115,4 @@ end
 function ZUI_Emotes:setEmoteList(list)
     ZUI_Emotes.list = list
 end    
+

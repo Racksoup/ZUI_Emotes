@@ -1,418 +1,419 @@
 local ZUI_Emotes = LibStub("AceAddon-3.0"): GetAddon("ZUI_Emotes")
+local L = LibStub("AceLocale-3.0"):GetLocale("ZUI_Emotes_Locale")
 if not ZUI_Emotes then return end
 
 local emotes = {
     anim = {
         {
-            text = "Angry",
+            text = L["Angry"],
             emote = "angry"
         },
         {
-            text = "Applaud",
+            text = L["Applaud"],
             emote = "applaud"
         },
         {
-            text = "Attack Target",
+            text = L["Attack Target"],
             emote = "attackmytarget"
         },
         {
-            text = "Bashful",
+            text = L["Bashful"],
             emote = "bashful"
         },
         {
-            text = "Beg",
+            text = L["Beg"],
             emote = "beg"
         },
         {
-            text = "Blame",
+            text = L["Blame"],
             emote = "blame"
         },
         {
-            text = "Blow",
+            text = L["Blow"],
             emote = "kiss"
         },
         {
-            text = "Blush",
+            text = L["Blush"],
             emote = "blush"
         },
         {
-            text = "Boggle",
+            text = L["Boggle"],
             emote = "boggle"
         },
         {
-            text = "Boop",
+            text = L["Boop"],
             emote = "boop",
         },
         {
-            text = "Bow",
+            text = L["Bow"],
             emote = "bow",
         },
         {
-            text = "Bravo",
+            text = L["Bravo"],
             emote = "applaud",
         },
         {
-            text = "Bye",
+            text = L["Bye"],
             emote = "bye",
         },
         {
-            text = "Cackle",
+            text = L["Cackle"],
             emote = "cackle",
         },
         {
-            text = "Charge",
+            text = L["Charge"],
             emote = "charge",
         },
         {
-            text = "Cheer",
+            text = L["Cheer"],
             emote = "cheer",
         },
         {
-            text = "Chew",
+            text = L["Chew"],
             emote = "eat",
         },
         {
-            text = "Chicken",
+            text = L["Chicken"],
             emote = "chicken",
         },
         {
-            text = "Chuckle",
+            text = L["Chuckle"],
             emote = "chuckle",
         },
         {
-            text = "Clap",
+            text = L["Clap"],
             emote = "clap",
         },
         {
-            text = "Commend",
+            text = L["Commend"],
             emote = "commend",
         },
         {
-            text = "Confused",
+            text = L["Confused"],
             emote = "confused",
         },
         {
-            text = "Congratulate",
+            text = L["Congratulate"],
             emote = "congratulate",
         },
         {
-            text = "Cower",
+            text = L["Cower"],
             emote = "cower",
         },
         {
-            text = "Cry",
+            text = L["Cry"],
             emote = "cry",
         },
         {
-            text = "Curious",
+            text = L["Curious"],
             emote = "curious",
         },
         {
-            text = "Curtsey",
+            text = L["Curtsey"],
             emote = "curtsey",
         },
         {
-            text = "Dance",
+            text = L["Dance"],
             emote = "dance",
         },
         {
-            text = "Drink",
+            text = L["Drink"],
             emote = "drink",
         },
         {
-            text = "Eat",
+            text = L["Eat"],
             emote = "eat",
         },
         {
-            text = "Excited",
+            text = L["Excited"],
             emote = "talkex",
         },
         {
-            text = "Farewell",
+            text = L["Farewell"],
             emote = "bye",
         },
         {
-            text = "Feast",
+            text = L["Feast"],
             emote = "eat",
         },
         {
-            text = "Flap",
+            text = L["Flap"],
             emote = "chicken",
         },
         {
-            text = "Flee",
+            text = L["Flee"],
             emote = "flee",
         },
         {
-            text = "Flex",
+            text = L["Flex"],
             emote = "flex",
         },
         {
-            text = "Flirt",
+            text = L["Flirt"],
             emote = "flirt",
         },
         {
-            text = "Follow Me",
+            text = L["Follow Me"],
             emote = "follow",
         },
         {
-            text = "Gasp",
+            text = L["Gasp"],
             emote = "gasp",
         },
         {
-            text = "Giggle",
+            text = L["Giggle"],
             emote = "giggle",
         },
         {
-            text = "Gloat",
+            text = L["Gloat"],
             emote = "gloat",
         },
         {
-            text = "Golf Clap",
+            text = L["Golf Clap"],
             emote = "golfclap",
         },
         {
-            text = "Goodbye",
+            text = L["Goodbye"],
             emote = "bye",
         },
         {
-            text = "Greet",
+            text = L["Greet"],
             emote = "greet",
         },
         {
-            text = "Grovel",
+            text = L["Grovel"],
             emote = "grovel",
         },
         {
-            text = "Growl",
+            text = L["Growl"],
             emote = "growl",
         },
         {
-            text = "Guffaw",
+            text = L["Guffaw"],
             emote = "guffaw",
         },
         {
-            text = "Hail",
+            text = L["Hail"],
             emote = "hail",
         },
         {
-            text = "Heal Me",
+            text = L["Heal Me"],
             emote = "healme",
         },
         {
-            text = "Hello",
+            text = L["Hello"],
             emote = "hello",
         },
         {
-            text = "Help Me",
+            text = L["Help Me"],
             emote = "helpme",
         },
         {
-            text = "Hi",
+            text = L["Hi"],
             emote = "hello",
         },
         {
-            text = "Incoming",
+            text = L["Incoming"],
             emote = "incoming",
         },
         {
-            text = "Insult",
+            text = L["Insult"],
             emote = "insult",
         },
         {
-            text = "Kiss",
+            text = L["Kiss"],
             emote = "kiss",
         },
         {
-            text = "Kneel",
+            text = L["Kneel"],
             emote = "kneel",
         },
         {
-            text = "Laugh",
+            text = L["Laugh"],
             emote = "laugh",
         },
         {
-            text = "Laydown",
+            text = L["Laydown"],
             emote = "laydown",
         },
         {
-            text = "LoL",
+            text = L["LoL"],
             emote = "laugh",
         },
         {
-            text = "Lost",
+            text = L["Lost"],
             emote = "lost",
         },
         {
-            text = "Mad",
+            text = L["Mad"],
             emote = "angry",
         },
         {
-            text = "Mount-Rear",
+            text = L["Mount-Rear"],
             emote = "mountspecial",
         },
         {
-            text = "Mourn",
+            text = L["Mourn"],
             emote = "mourn",
         },
         {
-            text = "No",
+            text = L["No"],
             emote = "no",
         },
         {
-            text = "Nod",
+            text = L["Nod"],
             emote = "nod",
         },
         {
-            text = "OOM",
+            text = L["OOM"],
             emote = "oom",
         },
         {
-            text = "Open-Fire",
+            text = L["Open-Fire"],
             emote = "openfire",
         },
         {
-            text = "Party",
+            text = L["Party"],
             emote = "drink",
         },
         {
-            text = "Peon",
+            text = L["Peon"],
             emote = "grovel",
         },
         {
-            text = "Plead",
+            text = L["Plead"],
             emote = "plead",
         },
         {
-            text = "Point",
+            text = L["Point"],
             emote = "point",
         },
         {
-            text = "Ponder",
+            text = L["Ponder"],
             emote = "ponder",
         },
         {
-            text = "Pray",
+            text = L["Pray"],
             emote = "pray",
         },
         {
-            text = "Puzzled",
+            text = L["Puzzled"],
             emote = "puzzle",
         },
         {
-            text = "Rasp",
+            text = L["Rasp"],
             emote = "rasp",
         },
         {
-            text = "Roar",
+            text = L["Roar"],
             emote = "roar",
         },
         {
-            text = "Rofl",
+            text = L["Rofl"],
             emote = "rofl",
         },
         {
-            text = "Rude",
+            text = L["Rude"],
             emote = "rude",
         },
         {
-            text = "Salute",
+            text = L["Salute"],
             emote = "salute",
         },
         {
-            text = "Shindig",
+            text = L["Shindig"],
             emote = "drink",
         },
         {
-            text = "Shrug",
+            text = L["Shrug"],
             emote = "shrug",
         },
         {
-            text = "Shy",
+            text = L["Shy"],
             emote = "shy",
         },
         {
-            text = "Silly",
+            text = L["Silly"],
             emote = "joke",
         },
         {
-            text = "Sleep",
+            text = L["Sleep"],
             emote = "sleep",
         },
         {
-            text = "Sob",
+            text = L["Sob"],
             emote = "cry",
         },
         {
-            text = "Strong",
+            text = L["Strong"],
             emote = "flex",
         },
         {
-            text = "Strut",
+            text = L["Strut"],
             emote = "chicken",
         },
         {
-            text = "Surrender",
+            text = L["Surrender"],
             emote = "surrender",
         },
         {
-            text = "Talk",
+            text = L["Talk"],
             emote = "talk",
         },
         {
-            text = "Talk Excitedly",
+            text = L["Talk Excitedly"],
             emote = "talkex",
         },
         {
-            text = "Question?",
+            text = L["Question?"],
             emote = "talkq",
         },
         {
-            text = "Taunt",
+            text = L["Taunt"],
             emote = "taunt",
         },
         {
-            text = "Thank",
+            text = L["Thank"],
             emote = "thank",
         },
         {
-            text = "Train",
+            text = L["Train"],
             emote = "train",
         },
         {
-            text = "Victory",
+            text = L["Victory"],
             emote = "victory",
         },
         {
-            text = "Violin",
+            text = L["Violin"],
             emote = "violin",
         },
         {
-            text = "Wait",
+            text = L["Wait"],
             emote = "wait",
         },
         {
-            text = "Wave",
+            text = L["Wave"],
             emote = "wave",
         },
         {
-            text = "Weep",
+            text = L["Weep"],
             emote = "cry",
         },
         {
-            text = "Welcome",
+            text = L["Welcome"],
             emote = "welcome",
         },
         {
-            text = "Woot",
+            text = L["Woot"],
             emote = "cheer",
         },
         {
-            text = "Yes",
+            text = L["Yes"],
             emote = "nod",
         },
         {
-            text = "YW",
+            text = L["YW"],
             emote = "yw",
         },
     },
@@ -644,543 +645,543 @@ local emotes = {
     },
     other = {
         {
-            text = "Absent",
+            text = L["Absent"],
             emote = "absent"
         },
         {
-            text = "Agree",
+            text = L["Agree"],
             emote = "agree"
         },
         {
-            text = "Amaze",
+            text = L["Amaze"],
             emote = "amaze"
         },
         {
-            text = "Apologize",
+            text = L["Apologize"],
             emote = "apologize"
         },
         {
-            text = "Arm",
+            text = L["Arm"],
             emote = "arm"
         },
         {
-            text = "Awe",
+            text = L["Awe"],
             emote = "awe"
         },
         {
-            text = "Backpack",
+            text = L["Backpack"],
             emote = "backpack"
         },
         {
-            text = "Bad Feeling",
+            text = L["Bad Feeling"],
             emote = "badfeeling"
         },
         {
-            text = "Bark",
+            text = L["Bark"],
             emote = "bark"
         },
         {
-            text = "Beckon",
+            text = L["Beckon"],
             emote = "beckon"
         },
         {
-            text = "Belch",
+            text = L["Belch"],
             emote = "burp"
         },
         {
-            text = "Bite",
+            text = L["Bite"],
             emote = "bite"
         },
         {
-            text = "Blank",
+            text = L["Blank"],
             emote = "blank"
         },
         {
-            text = "Bleed",
+            text = L["Bleed"],
             emote = "bleed"
         },
         {
-            text = "Blood",
+            text = L["Blood"],
             emote = "bleed"
         },
         {
-            text = "Blink",
+            text = L["Blink"],
             emote = "blink"
         },
         {
-            text = "Bonk",
+            text = L["Bonk"],
             emote = "bonk"
         },
         {
-            text = "Bounce",
+            text = L["Bounce"],
             emote = "bounce"
         },
         {
-            text = "Brandish",
+            text = L["Brandish"],
             emote = "brandish",
         },
         {
-            text = "Brb",
+            text = L["Brb"],
             emote = "brb",
         },
         {
-            text = "Breath",
+            text = L["Breath"],
             emote = "breath",
         },
         {
-            text = "Burp",
+            text = L["Burp"],
             emote = "burp",
         },
         {
-            text = "Calm",
+            text = L["Calm"],
             emote = "calm",
         },
         {
-            text = "Challenge",
+            text = L["Challenge"],
             emote = "challenge"
         },
         {
-            text = "Cat",
+            text = L["Cat"],
             emote = "scratch",
         },
         {
-            text = "Catty",
+            text = L["Catty"],
             emote = "scratch",
         },
         {
-            text = "Charm",
+            text = L["Charm"],
             emote = "charm",
         },
         {
-            text = "Chug",
+            text = L["Chug"],
             emote = "chug",
         },
         {
-            text = "Cold",
+            text = L["Cold"],
             emote = "cold",
         },
         {
-            text = "Comfort",
+            text = L["Comfort"],
             emote = "comfort",
         },
         {
-            text = "Cough",
+            text = L["Cough"],
             emote = "cough",
         },
         {
-            text = "Cover Ears",
+            text = L["Cover Ears"],
             emote = "coverears",
         },
         {
-            text = "Crack",
+            text = L["Crack"],
             emote = "crack",
         },
         {
-            text = "Cringe",
+            text = L["Cringe"],
             emote = "cringe",
         },
         {
-            text = "Cross-Arms",
+            text = L["Cross-Arms"],
             emote = "crossarms",
         },
         {
-            text = "Cuddle",
+            text = L["Cuddle"],
             emote = "cuddle",
         },
         {
-            text = "Ding",
+            text = L["Ding"],
             emote = "ding",
         },
         {
-            text = "Disagree",
+            text = L["Disagree"],
             emote = "disagree",
         },
         {
-            text = "Doubt",
+            text = L["Doubt"],
             emote = "doubt",
         },
         {
-            text = "Disappointed",
+            text = L["Disappointed"],
             emote = "frown",
         },
         {
-            text = "Doh..",
+            text = L["Doh.."],
             emote = "bonk",
         },
         {
-            text = "Doom",
+            text = L["Doom"],
             emote = "threaten",
         },
         {
-            text = "Drool",
+            text = L["Drool"],
             emote = "drool",
         },
         {
-            text = "Duck",
+            text = L["Duck"],
             emote = "duck",
         },
         {
-            text = "Embarrass",
+            text = L["Embarrass"],
             emote = "embarrass",
         },
         {
-            text = "Encourage",
+            text = L["Encourage"],
             emote = "encourage",
         },
         {
-            text = "Enemy",
+            text = L["Enemy"],
             emote = "enemy",
         },
         {
-            text = "Eye",
+            text = L["Eye"],
             emote = "eye",
         },
         {
-            text = "Eyebrow",
+            text = L["Eyebrow"],
             emote = "eyebrow",
         },
         {
-            text = "Facepalm",
+            text = L["Facepalm"],
             emote = "facepalm",
         },
         {
-            text = "Faint",
+            text = L["Faint"],
             emote = "faint",
         },
         {
-            text = "Fart",
+            text = L["Fart"],
             emote = "fart",
         },
         {
-            text = "Fear",
+            text = L["Fear"],
             emote = "cower",
         },
         {
-            text = "Fidget",
+            text = L["Fidget"],
             emote = "fidget",
         },
         {
-            text = "Flop",
+            text = L["Flop"],
             emote = "flop",
         },
         {
-            text = "Food",
+            text = L["Food"],
             emote = "hungry",
         },
         {
-            text = "Frown",
+            text = L["Frown"],
             emote = "frown",
         },
         {
-            text = "Gaze",
+            text = L["Gaze"],
             emote = "gaze",
         },
         {
-            text = "Glad",
+            text = L["Glad"],
             emote = "happy",
         },
         {
-            text = "Glare",
+            text = L["Glare"],
             emote = "glare",
         },
         {
-            text = "Glower",
+            text = L["Glower"],
             emote = "glower",
         },
         {
-            text = "Go",
+            text = L["Go"],
             emote = "go",
         },
         {
-            text = "Going",
+            text = L["Going"],
             emote = "going",
         },
         {
-            text = "Grin",
+            text = L["Grin"],
             emote = "grin",
         },
         {
-            text = "Groan",
+            text = L["Groan"],
             emote = "groan",
         },
         {
-            text = "Happy",
+            text = L["Happy"],
             emote = "happy",
         },
         {
-            text = "High-Five",
+            text = L["High-Five"],
             emote = "highfive",
         },
         {
-            text = "Hug",
+            text = L["Hug"],
             emote = "hug",
         },
         {
-            text = "Hungry",
+            text = L["Hungry"],
             emote = "hungry",
         },
         {
-            text = "Impatient",
+            text = L["Impatient"],
             emote = "fidget",
         },
         {
-            text = "Introduce",
+            text = L["Introduce"],
             emote = "introduce",
         },
         {
-            text = "JK",
+            text = L["JK"],
             emote = "jk",
         },
         {
-            text = "Knuckles",
+            text = L["Knuckles"],
             emote = "crack",
         },
         {
-            text = "Lavish",
+            text = L["Lavish"],
             emote = "praise",
         },
         {
-            text = "Lick",
+            text = L["Lick"],
             emote = "lick",
         },
         {
-            text = "Luck",
+            text = L["Luck"],
             emote = "luck",
         },
         {
-            text = "Listen",
+            text = L["Listen"],
             emote = "listen",
         },
         {
-            text = "Love",
+            text = L["Love"],
             emote = "love",
         },
         {
-            text = "Map",
+            text = L["Map"],
             emote = "map",
         },
         {
-            text = "Massage",
+            text = L["Massage"],
             emote = "massage",
         },
         {
-            text = "Moan",
+            text = L["Moan"],
             emote = "moan",
         },
         {
-            text = "Mock",
+            text = L["Mock"],
             emote = "mock",
         },
         {
-            text = "Moon",
+            text = L["Moon"],
             emote = "moon",
         },
         {
-            text = "Nosepick",
+            text = L["Nosepick"],
             emote = "nosepick",
         },
         {
-            text = "Panic",
+            text = L["Panic"],
             emote = "panic",
         },
         {
-            text = "Pat",
+            text = L["Pat"],
             emote = "pat",
         },
         {
-            text = "Peer",
+            text = L["Peer"],
             emote = "peer",
         },
         {
-            text = "Pest",
+            text = L["Pest"],
             emote = "shoo",
         },
         {
-            text = "Pick",
+            text = L["Pick"],
             emote = "nosepick",
         },
         {
-            text = "Pity",
+            text = L["Pity"],
             emote = "pity",
         },
         {
-            text = "Pizza",
+            text = L["Pizza"],
             emote = "hungry",
         },
         {
-            text = "Poke",
+            text = L["Poke"],
             emote = "poke",
         },
         {
-            text = "Pounce",
+            text = L["Pounce"],
             emote = "pounce",
         },
         {
-            text = "Praise",
+            text = L["Praise"],
             emote = "praise",
         },
         {
-            text = "Purr",
+            text = L["Purr"],
             emote = "purr",
         },
         {
-            text = "Question",
+            text = L["Question"],
             emote = "talkq",
         },
         {
-            text = "Raise",
+            text = L["Raise"],
             emote = "raise",
         },
         {
-            text = "Ready",
+            text = L["Ready"],
             emote = "ready",
         },
         {
-            text = "Rear",
+            text = L["Rear"],
             emote = "shake",
         },
         {
-            text = "Sad",
+            text = L["Sad"],
             emote = "sad",
         },
         {
-            text = "Scared",
+            text = L["Scared"],
             emote = "scared",
         },
         {
-            text = "Scratch",
+            text = L["Scratch"],
             emote = "scratch",
         },
         {
-            text = "Sexy",
+            text = L["Sexy"],
             emote = "sexy",
         },
         {
-            text = "Shake",
+            text = L["Shake"],
             emote = "shake",
         },
         {
-            text = "Shimmy",
+            text = L["Shimmy"],
             emote = "shimmy",
         },
         {
-            text = "Shiver",
+            text = L["Shiver"],
             emote = "shiver",
         },
         {
-            text = "Shoo",
+            text = L["Shoo"],
             emote = "shoo",
         },
         {
-            text = "Slap",
+            text = L["Slap"],
             emote = "slap",
         },
         {
-            text = "Smell",
+            text = L["Smell"],
             emote = "stink",
         },
         {
-            text = "Smirk",
+            text = L["Smirk"],
             emote = "smirk",
         },
         {
-            text = "Snarl",
+            text = L["Snarl"],
             emote = "snarl",
         },
         {
-            text = "Snicker",
+            text = L["Snicker"],
             emote = "snicker",
         },
         {
-            text = "Sniff",
+            text = L["Sniff"],
             emote = "sniff",
         },
         {
-            text = "Snub",
+            text = L["Snub"],
             emote = "snub",
         },
         {
-            text = "Soothe",
+            text = L["Soothe"],
             emote = "soothe",
         },
         {
-            text = "Sorry",
+            text = L["Sorry"],
             emote = "apologize",
         },
         {
-            text = "Spit",
+            text = L["Spit"],
             emote = "spit",
         },
         {
-            text = "Spoon",
+            text = L["Spoon"],
             emote = "cuddle",
         },
         {
-            text = "Stare",
+            text = L["Stare"],
             emote = "stare",
         },
         {
-            text = "Stink",
+            text = L["Stink"],
             emote = "stink",
         },
         {
-            text = "Surprised",
+            text = L["Surprised"],
             emote = "surprised",
         },
         {
-            text = "Tap",
+            text = L["Tap"],
             emote = "tap",
         },
         {
-            text = "Tease",
+            text = L["Tease"],
             emote = "tease",
         },
         {
-            text = "Thirsty",
+            text = L["Thirsty"],
             emote = "thirsty",
         },
         {
-            text = "Threat",
+            text = L["Threat"],
             emote = "threaten",
         },
         {
-            text = "Tickle",
+            text = L["Tickle"],
             emote = "tickle",
         },
         {
-            text = "Tired",
+            text = L["Tired"],
             emote = "tired",
         },
         {
-            text = "Veto",
+            text = L["Veto"],
             emote = "veto",
         },
         {
-            text = "Volunteer",
+            text = L["Volunteer"],
             emote = "raise",
         },
         {
-            text = "Whine",
+            text = L["Whine"],
             emote = "whine",
         },
         {
-            text = "Wickedly",
+            text = L["Wickedly"],
             emote = "grin",
         },
         {
-            text = "Wink",
+            text = L["Wink"],
             emote = "wink",
         },
         {
-            text = "Work",
+            text = L["Work"],
             emote = "work",
         },
         {
-            text = "Wrath",
+            text = L["Wrath"],
             emote = "threaten",
         },
         {
-            text = "Yay!",
+            text = L["Yay!"],
             emote = "happy",
         },
     },
