@@ -58,8 +58,6 @@ function ZUI_Emotes:OnEnable()
     ZUI_GUI.frame:SetWidth(self.db.profile.frameSize["width"])
     ZUI_GUI.frame:SetHeight(self.db.profile.frameSize["height"])
     ZUI_GUI.frame:SetPoint(self.db.profile.framePos["point"], self.db.profile.framePos["offsetX"], self.db.profile.framePos["offsetY"])
-
-    
     
     ZUI_GUI.tab =  ZUI_GUI:Create("TabGroup")
     ZUI_GUI.tab:SetLayout("Fill")
@@ -71,7 +69,6 @@ function ZUI_Emotes:OnEnable()
 end
 
 function ZUI_Emotes:OnDisable()
-    --self.db.profile.frameSize["height"] = ZUI_GUI.frame:GetHeight()
     self.db.profile.framePos["point"], x, y, self.db.profile.framePos["offsetX"], self.db.profile.framePos["offsetY"] = ZUI_GUI.frame:GetPoint()
     
     ZUI_GUI:Release(ZUI_GUI.frame) 
@@ -115,4 +112,3 @@ end
 function ZUI_Emotes:setEmoteList(list)
     ZUI_Emotes.list = list
 end    
-
