@@ -6,7 +6,7 @@ local ZUI_LDB = LibStub("LibDataBroker-1.1"):NewDataObject("ZUI_Emotes", {
     text = L["ZUI Emotes"],
     icon = GetItemIcon(5043),
     OnClick = function()
-        if (ZUI_GUI.frame:IsVisible())
+        if (ZUI_GUI.mainwin:IsVisible())
         then
             ZUI_Emotes:OnDisable();
         else
@@ -51,13 +51,13 @@ function ZUI_Emotes:OnInitialize()
 end
 
 function ZUI_Emotes:OnEnable()
-    ZUI_GUI.frame = ZUI_GUI:Create("Frame")
-    ZUI_GUI.frame:SetTitle("ZUI_Emotes")
-    ZUI_GUI.frame:SetCallback("OnClose", function() ZUI_Emotes:OnDisable() end)
-    ZUI_GUI.frame:SetLayout("Fill")
-    ZUI_GUI.frame:SetWidth(self.db.profile.frameSize["width"])
-    ZUI_GUI.frame:SetHeight(self.db.profile.frameSize["height"])
-    ZUI_GUI.frame:SetPoint(self.db.profile.framePos["point"], self.db.profile.framePos["offsetX"], self.db.profile.framePos["offsetY"])
+    ZUI_GUI.mainwin = ZUI_GUI:Create("Frame")
+    ZUI_GUI.mainwin:SetTitle("ZUI_Emotes")
+    ZUI_GUI.mainwin:SetCallback("OnClose", function() ZUI_Emotes:OnDisable() end)
+    ZUI_GUI.mainwin:SetLayout("Fill")
+    ZUI_GUI.mainwin:SetWidth(self.db.profile.frameSize["width"])
+    ZUI_GUI.mainwin:SetHeight(self.db.profile.frameSize["height"])
+    ZUI_GUI.mainwin:SetPoint(self.db.profile.framePos["point"], self.db.profile.framePos["offsetX"], self.db.profile.framePos["offsetY"])
     
     ZUI_GUI.tab =  ZUI_GUI:Create("TabGroup")
     ZUI_GUI.tab:SetLayout("Fill")
@@ -65,13 +65,13 @@ function ZUI_Emotes:OnEnable()
     ZUI_GUI.tab:SetCallback("OnGroupSelected", SelectGroup)
     ZUI_GUI.tab:SelectTab("tab1")
     
-    ZUI_GUI.frame:AddChild(ZUI_GUI.tab)
+    ZUI_GUI.mainwin:AddChild(ZUI_GUI.tab)
 end
 
 function ZUI_Emotes:OnDisable()
     self.db.profile.framePos["point"], x, y, self.db.profile.framePos["offsetX"], self.db.profile.framePos["offsetY"] = ZUI_GUI.frame:GetPoint()
-    self.db.profile.frameSize["width"], self.db.profile.frameSize["height"] = ZUI_GUI.frame.frame:GetSize()
-    ZUI_GUI:Release(ZUI_GUI.frame) 
+    self.db.profile.frameSize["width"], self.db.profile.frameSize["height"] = ZUI_GUI.mainwin.frame:GetSize()
+    ZUI_GUI:Release(ZUI_GUI.mainwin) 
 end
 
 function DrawGroup(container, emoteList)
@@ -98,13 +98,13 @@ end
 function SelectGroup(container, event, group)
     container:ReleaseChildren()
     if group == "tab1" then
-        ZUI_GUI.frame:SetStatusText(L["Animation Emotes"])
+        ZUI_GUI.mainwin:SetStatusText(L["Animation Emotes"])
         DrawGroup(container, ZUI_Emotes.list.anim)
     elseif group == "tab2" then
-        ZUI_GUI.frame:SetStatusText(L["Voice Emotes"])
+        ZUI_GUI.mainwin:SetStatusText(L["Voice Emotes"])
         DrawGroup(container, ZUI_Emotes.list.voice)
     elseif group == "tab3" then
-        ZUI_GUI.frame:SetStatusText(L["Other Emotes"])
+        ZUI_GUI.mainwin:SetStatusText(L["Other Emotes"])
         DrawGroup(container, ZUI_Emotes.list.other)
     end
 end
