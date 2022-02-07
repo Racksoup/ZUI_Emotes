@@ -337,12 +337,20 @@ local emotes = {
             emote = "joke",
         },
         {
+            text = L["Sit"],
+            emote = "sit"
+        },
+        {
             text = L["Sleep"],
             emote = "sleep",
         },
         {
             text = L["Sob"],
             emote = "cry",
+        },
+        {
+            text = L["Stand"],
+            emote = "stand"
         },
         {
             text = L["Strong"],
