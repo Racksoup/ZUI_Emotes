@@ -66,6 +66,7 @@ function ZUI_Emotes:OnEnable()
     ZUI_GUI.tab:SelectTab("tab1")
     
     ZUI_GUI.mainwin:AddChild(ZUI_GUI.tab)
+    ZUI_GUI.mainwin:Hide()
 end
 
 function ZUI_Emotes:OnDisable()
