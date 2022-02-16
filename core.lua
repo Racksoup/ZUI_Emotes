@@ -11,6 +11,7 @@ local ZUI_LDB = LibStub("LibDataBroker-1.1"):NewDataObject("ZUI_Emotes", {
             ZUI_Emotes:OnDisable();
         else
             ZUI_Emotes:OnEnable();
+            ZUI_GUI.mainwin:Show()
         end
     end,
     OnTooltipShow = function(tooltip)
@@ -24,7 +25,7 @@ local options = {
     handler = ZUI_Emotes,
     type = 'group',
     args = {
-
+        
     },
 }
 
@@ -72,7 +73,7 @@ end
 function ZUI_Emotes:OnDisable()
     self.db.profile.framePos["point"], x, y, self.db.profile.framePos["offsetX"], self.db.profile.framePos["offsetY"] = ZUI_GUI.mainwin:GetPoint()
     self.db.profile.frameSize["width"], self.db.profile.frameSize["height"] = ZUI_GUI.mainwin.frame:GetSize()
-    ZUI_GUI:Release(ZUI_GUI.mainwin) 
+    ZUI_GUI.mainwin:Hide()
 end
 
 function DrawGroup(container, emoteList)
