@@ -1,0 +1,27 @@
+The project description must contain these facts:
+- Features offered by the project.
+- How those features affect a user's experience.
+
+ZUI_Emotes is a small fun addon that lets users select emotes! Includes a selection menu of all in-game emotes!
+
+
+
+Emote selection is divided between 3 panels
+
+- Animation emotes (all emotes with an animation)
+
+- Voice emotes (all emotes with a voice-line)
+
+- Other emotes (emotes without an animation or voice-line)
+
+
+
+Click any emote to show an emotion and interact with friends!
+
+With every emote in the game at the click of a button you will have access to a new way of communicating.
+
+ZUI_Emotes also helps you communicate with the enemy faction. (If you would even want that!)
+
+
+
+Includes locale support. The only current locale is enUS.
