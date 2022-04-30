@@ -1,0 +1,12 @@
+## Interface: 90200
+## Title: ZUI_Emotes
+## Author: ZUI
+## SavedVariables: ZUI_EmotesDB
+## OptionalDeps: Ace3
+## X-Embeds: Ace3
+
+embeds.xml
+
+enUS.lua
+core.lua
+emoteList.lua
